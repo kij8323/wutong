@@ -45,7 +45,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item">
-          <img class="first-slide" lowsrc="IMG_1784(2).jpg" src="IMG_1784.jpg"  alt="First slide">
+          <img id="first-slide" class="first-slide" src="IMG_1784(2).jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption" >
               <h1>梧桐工作室</h1>
@@ -65,7 +65,7 @@
           </div>
         </div>-->
         <div class="item active">
-          <img class="third-slide" lowsrc="IMG_1764(2).jpg" src="IMG_1764.jpg"  alt="Third slide">
+          <img id="second-slide" class="second-slide" src="IMG_1764(2).jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>专注于中小型web软件工程的团队</h1>
@@ -196,5 +196,17 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap-3.3.4-dist/js/ie10-viewport-bug-workaround.js"></script>
   
+    <script type="text/javascript">
+    var img = new Image();//新建一个图片对象
+    img.src = "IMG_1784.jpg"; //最终显示的大图
+    img.onload = function() {
+    document.getElementById('first-slide').src = this.src;
+    }
+    var img1 = new Image();//新建一个图片对象
+    img1.src = "IMG_1764.jpg"; //最终显示的大图
+    img1.onload = function() {
+    document.getElementById('second-slide').src = this.src;
+    }
+    </script>
 
 </body></html>
